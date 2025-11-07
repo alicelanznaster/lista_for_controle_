@@ -6,11 +6,20 @@
     */
 
     //ENTRADA
-
+    const numUsuario = Number(prompt(`Informe um número.`));
 
     //PROCESSAMENTO
+    let divisivel = 0;
 
+    for (let num = 2; num < numUsuario; num++) {
+        if( numUsuario % 2 == 0 ) {
+            divisivel++
+        }
+    }
 
     //SAÍDA
+    if ( divisivel > 0) { 
+        alert(`O número ${numUsuario} não é primo.`);
+    }
 
 </script>
