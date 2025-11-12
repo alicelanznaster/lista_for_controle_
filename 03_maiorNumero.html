@@ -1,27 +1,22 @@
 <meta charset="UTF-8">
 <script>
     /*
-    PROBLEMA: MAIOR NÚMERO
-    Faça um programa que peça ao usuário para informar cinco números.
-    No final, apresente o maior número informado pelo usuário.
+    PROBLEMA: MÉDIA DO ALUNO
+    Pergunte ao professor quantas notas o aluno obteve. Na sequência, usando for, peça para o professor informar todas as notas do aluno.
+    Calcule a média das notas e apresente o resultado na tela.
     */
 
     //ENTRADA
-    const num1 = Number(prompt(`Informe o primeiro número:`));
-    const num2 = Number(prompt(`Informe o segundo número:`));
-    const num3 = Number(prompt(`Informe o terceiro número:`));
-    const num4 = Number(prompt(`Informe o quarto número:`));
-    const num5 = Number(prompt(`Informe o quinto número:`));
-
+    const notasAluno = Number(prompt(`Informe quantas notas o aluno obteve`));
+    
+    let soma = 0;
     //PROCESSAMENTO
-    let listaNum = [num1, num2, num3, num4, num5];
-
-    for (let i = 0; i < listaNum.length; i = i + 1) {
-        listaNum.sort((a, b) => b - a);
+    for (i = 1; i <= notasAluno; i++) {
+        const notas = Number(prompt(`Informe a ${i}ª nota do aluno`))
+        soma = soma + notas;
     }
-
-    document.write(`O maior número informado é ${listaNum[0]}`)
-
+    
+    const media = soma / notasAluno;
     //SAÍDA
-
+    document.write(`A média total das notas do aluno é ${media.toFixed(1)}`)
 </script>
